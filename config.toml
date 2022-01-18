@@ -1,0 +1,13 @@
+base_url = "https://simoncoudeville.be"
+title = "Simon Coudeville"
+description = "Personal blog of Simon Coudeville"
+compile_sass = false
+build_search_index = false
+
+[markdown]
+highlight_code = true
+# highlight_theme = "gray-matter-dark"
+highlight_theme = "css"
+
+[extra]
+blog_date_format = "%d.%m.%Y"

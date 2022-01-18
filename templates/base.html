@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}" />
+    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+    <link rel="stylesheet" href="https://use.typekit.net/ihr2zpy.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    {% block content %} {% endblock %}
+    <nav class="row">
+        <div class="container">
+            <div class="flow">
+                <h2 class="h3">
+                    Pages
+                </h2>
+                <ul class="list-reset">
+                    <li>
+                        <a href="/">Index</a>
+                    </li>
+                    <li>
+                        <a href="/about">About</a>
+                    </li>
+                    <li>
+                        <a href="/colophon">Colophon</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <footer class="row pb-clear">
+        <div class="container">
+            <div class="flex flex--align-items-baseline flex--column-gap-base flex--justify-space-between">
+                <p aria-hidden="true">
+                    S&#x0306;
+                </p>
+                <p class="color-meta">
+                    &copy; <span class="text-date">{{ now() | date(format="%Y") }}</span> {{ config.title }}
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</html>
