@@ -5,17 +5,6 @@ date = 2019-11-27
 slug = "a-long-overdue-hello-world"
 +++
 
-<figure class="terminal mb-double">
-    <div class="terminal__top">
-        <div class="terminal__button"></div>
-        <div class="terminal__button"></div>
-        <div class="terminal__button"></div>
-    </div>
-    <div class="terminal__body">
-        <p class="cursor-text">Hello world</p>
-    </div>
-</figure>
-
 I've been designing and making websites since 2004. That's a long time in internet terms. When I started studying the web was only just starting to get mainstream attention. CSS didn't exist. Back then everything was done with tables and HTML properties. By now you should have a guess how old I really am.
 So it took me allmost over 20 years to finally start a blog. But here we are. This is my first personal blog post ever. It's about how and why I finally made this place.
 
@@ -79,67 +68,23 @@ async function getStoredPoem(url) {
 }
 ```
 
-<div class="test">
-    <p class="test__item">test</p>
-</div>
-
 <style>
-.terminal {
-    --terminal-backgroundColor: var(--global-color-neutral-900);
-    --terminal__buttonSize: .75rem;
-    border: 1px solid var(--terminal-borderColor, var(--terminal-backgroundColor));
-    border-radius: var(--global-whitespace-2);
-    background-color: var(--terminal-backgroundColor);
-    overflow: hidden;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 3 / 2;
-    color: var(--global-color-neutral-100);
-    font-family: var(--global-code-fontFamily);
-    font-size: var(--global-fontSize-s);
+  :root {
+  --global-color-primary-hue: 250;
+  --global-color-primary-saturation: 50%;
+  --global-color-primary-lightness: 60%;
+  --html-before-backgroundColor: var(--global-color-primary);
+  --html-before-background-gradient-color1-hsl: calc(var(--global-color-primary-hue) - 20) var(--global-color-primary-saturation) var(--global-color-primary-lightness);
+  --html-before-background-gradient-color2-hsl: calc(var(--global-color-primary-hue) + 20) var(--global-color-primary-saturation) var(--global-color-primary-lightness);
+  --header__logo-color: white;
+  --header__meta-color: rgba(255 255 255 / .65);
+  --header__logo-decoration-color: var(--header__meta-color);  
+  --intro__title-color: white;
 }
-
-.terminal__top {
-    display: flex;
-    gap: .5rem;
-    padding: 1rem 1rem 0;
-}
-
-.terminal__button {
-    display: inline-block;
-    height: var(--terminal__buttonSize);
-    width: var(--terminal__buttonSize);
-    border-radius: 100%;    
-    background-color: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 100%, .15);
-}
-
-/* .terminal__button + .terminal__button {
-    margin-left: calc(var(--terminal__buttonMargin) / -2);
-} */
-
-.terminal__body {
-    padding: var(--page-inner-whitespace);
-}
-
-.cursor-text:after {
-    content: "_";        
-    animation: 1s blink step-end infinite;
-}
-
 
 @media (prefers-color-scheme: dark) {
-    .terminal {
-        --terminal-backgroundColor: transparent;
-        --terminal-borderColor: var(--global-border-color);
-    }    
-}
-
-@keyframes blink {
-  from, to {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
+  :root {
+    --html-before-opacity: .25;
   }
 }
 </style>

@@ -7,12 +7,13 @@
     <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}" />
     <title>{% block title %}{{ config.title }}{% endblock title %}</title>
     <link rel="stylesheet" href="https://use.typekit.net/ihr2zpy.css">
+
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
     {% block content %} {% endblock %}
-    <nav class="row">
+    <nav class="row row--surface">
         <div class="container">
             <div class="flow">
                 <h2 class="h3">
@@ -32,9 +33,9 @@
             </div>
         </div>
     </nav>
-    <footer class="row pb-clear">
+    <footer class="row row--surface">
         <div class="container">
-            <div class="flex flex--align-items-baseline flex--column-gap-base flex--justify-space-between">
+            <div class="flex align-items-baseline column-gap-base justify-space-between">
                 <p aria-hidden="true">
                     S&#x0306;
                 </p>
@@ -44,5 +45,7 @@
             </div>
         </div>
     </footer>
+    <script src="https://unpkg.com/css-doodle@0.24.0/css-doodle.min.js"></script>
+</body>
 
 </html>

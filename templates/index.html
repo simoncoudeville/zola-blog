@@ -3,7 +3,7 @@
 {% block content %}
 <!-- <header class="row pt-clear">
     <div class="container">
-        <div class="flex flex--align-items-baseline flex--column-gap-base flex--justify-space-between">
+        <div class="flex align-items-baseline column-gap-base justify-space-between">
             <h1 class="logo">
                 {{ config.title }}
             </h1>
@@ -18,7 +18,7 @@
         <div class="container flow">
 
             <div class="flow">
-                <div class="intro-top flex flex--align-items-end">
+                <div class="intro-top flex align-items-end">
                     <h1 class="h3">
                         Hello, my name is Simon.
                         <!-- Welcome to the website of Simon Coudeville. -->
@@ -53,7 +53,7 @@
             <ul class="list-reset">
                 {% for page in section.pages %}
                 <li
-                    class="flex-bp2 flex--align-items-baseline flex--direction-row-reverse flex--column-gap-base flex--justify-space-between mt-base mt-clear-bp2">
+                    class="flex-bp2 align-items-baseline direction-row-reverse column-gap-base justify-space-between mt-base mt-clear-bp2">
                     <span class="block color-meta text-date text-s">{{ page.date |
                         date(format=config.extra.blog_date_format)
                         }}</span>
