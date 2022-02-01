@@ -1,98 +1,84 @@
 {% extends "base.html" %}
 
+{% import "macros/about.html" as about %}
+
 {% block content %}
-<!-- <header class="row pt-clear">
-    <div class="container">
-        <div class="flex flex--align-items-baseline flex--column-gap-base flex--justify-space-between">
-            <h1 class="logo">
-                {{ config.title }}
-            </h1>
-            <p class="color-meta">
-                Designer &amp; teacher
-            </p>
-        </div>
-    </div>
-</header> -->
 <main>
-    <div class="row">
-        <div class="container flow">
-
-            <div class="flow">
-                <div class="intro-top flex flex--align-items-end">
-                    <h1 class="h3">
-                        Hello, my name is Simon.
-                        <!-- Welcome to the website of Simon Coudeville. -->
-                    </h1>
-                </div>
-                <p>
-                    <!-- Hi, I'm Simon, -->
-                    I'm an interactive designer into HTML &amp; CSS,
-                    Javascript, typography and minimalism.
-                    Currently teaching these topics at <a href="https://mct.be">MCT</a> &amp;
-                    <a href="https://devine.be">Devine</a>. Some of my design work is on
-                    <a href="https://dribbble.com/coudeville">Dribbble</a>. Some of my code experiments are on
-                    <a href="https://codepen.io/simoncoudeville/">Codepen</a>. Send me an
-                    <a href="mailto:coudeville.simon@gmail.com">email</a> or follow me on
-                    <a href="https://twitter.com/simoncoudeville">Twitter</a>. Read more <a href="/about">about
-                        me</a>.
-                </p>
+    {% set pages = section.pages %}
+    {% for page in pages | slice(end=1) %}
+    <header class="row">
+        <div class="container">
+            <div class="intro intro-top">
+                <!-- <img src="https://johannesklingebiel.de/img/2021-07-27-teaser.png" alt="" class="intro__img"> -->
+                <!-- <p class="color-meta text-s">
+                                {{ page.date | date(format=config.extra.blog_date_format) }}
+                            </p> -->
+                <h1><a class="link-decoration-none" href="{{ page.permalink }}">{{ page.title }}</a></h1>
             </div>
-            <!-- <h1 class="h3 mb-double">
-                    <span class="fw-normal color-meta">Welcome to the website of</span> <br>
-                    Simon Coudeville
-                </h1> -->
-
-
+        </div>
+    </header>
+    <div class="row">
+        <div class="container">
+            <div class="flow article">
+                <p class="article__date">
+                    <span class="color-meta">{{ page.date | date(format=config.extra.blog_date_format)
+                        }}</span> &mdash;
+                </p>
+                {{ page.content | safe }}
+            </div>
         </div>
     </div>
+    {% endfor %}
+    {#
+    {% block pagination %}
+    {% if paginator.previous or paginator.next %}
+    <nav class="row" role="pagination">
+        <div class="container">
+            {% if paginator.previous %}
+            <a class="newer-posts" href="{{ paginator.previous }}"><span aria-hidden="true">&larr;</span> Newer
+                Posts</a>
+            {% endif %}
+            <span class="page-number">Page {{ paginator.current_index }} of {{ paginator.number_pagers }}</span>
+            {% if paginator.next %}
+            <a class="older-posts" href="{{ paginator.next }}">Older Posts <span aria-hidden="true">&rarr;</span></a>
+            {% endif %}
+        </div>
+
+    </nav>
+    {% endif %}
+    {% endblock pagination %}
+    #}
+
+    <aside class="row">
+        <div class="container">
+            {% block about %}
+            {{ about::about() }}
+            {% endblock about%}
+        </div>
+    </aside>
     <section class="row">
         <div class="container flow">
-            <h2 class="h3">
-                {{ section.title }}
+            <h2>
+                All articles
             </h2>
             <ul class="list-reset">
-                {% for page in section.pages %}
+                {% set section_all = get_section(path="_index.md") %}
+                {% for post in section_all.pages %}
+                {% for page in pages | slice(end=1) %}
+                {% set this_page = page %}
                 <li
-                    class="flex-bp2 flex--align-items-baseline flex--direction-row-reverse flex--column-gap-base flex--justify-space-between mt-base mt-clear-bp2">
-                    <span class="block color-meta text-date text-s">{{ page.date |
+                    class="flex-bp2 align-items-baseline direction-row-reverse column-gap-base justify-space-between mt-base mt-clear-bp2">
+                    <span class="block color-meta text-date">{{ post.date |
                         date(format=config.extra.blog_date_format)
                         }}</span>
-                    <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+                    {% if post.title is matching(this_page.title) %}
+                    <a class="link-current" href="{{ post.permalink | safe }}">{{ post.title }}</a>
+                    {% else %}
+                    <a href="{{ post.permalink | safe }}">{{ post.title }}</a>
+                    {% endif %}
                 </li>
                 {% endfor %}
-            </ul>
-        </div>
-    </section>
-    <section class="row">
-        <div class="container flow">
-            <h2 class="h3">
-                Personal projects
-            </h2>
-            <ul class="list-reset flow">
-                <li>
-                    <a href="https://poems.simoncoudeville.be">
-                        Poems from the poetry database
-                    </a>
-                    <span class="block color-meta">Displays random poems fetched from the PoetryDB API</span>
-                </li>
-                <li>
-                    <a href="https://apod.simoncoudeville.be">
-                        Astronomy picture of the day
-                    </a>
-                    <span class="block color-meta">Fetches and shows data from the APOD API</span>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section class="row">
-        <div class="container flow">
-            <h2 class="h3">
-                Elsewhere
-            </h2>
-            <ul class="list-reset">
-                <li><a href="#">Twitter</a></li>
-                <li><a href="#">Codepen</a></li>
-                <li><a href="#">Dribbble</a></li>
+                {% endfor %}
             </ul>
         </div>
     </section>

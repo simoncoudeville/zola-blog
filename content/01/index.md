@@ -1,10 +1,10 @@
 +++
 title = "A long overdue hello world"
 description = "Why and how I finally made this place"
-date = 2019-11-27
+date = 2022-01-27
 slug = "a-long-overdue-hello-world"
 +++
-
+<!--- 
 <figure class="terminal mb-double">
     <div class="terminal__top">
         <div class="terminal__button"></div>
@@ -15,13 +15,15 @@ slug = "a-long-overdue-hello-world"
         <p class="cursor-text">Hello world</p>
     </div>
 </figure>
-
-I've been designing and making websites since 2004. That's a long time in internet terms. When I started studying the web was only just starting to get mainstream attention. CSS didn't exist. Back then everything was done with tables and HTML properties. By now you should have a guess how old I really am.
+--->
+I've been designing and making websites since 2004.* That's a long time in* internet terms. When I started studying the web was only just starting to get mainstream attention. CSS didn't exist. Back then everything was done with tables and HTML properties. By now you should have a guess how old I really am.
 So it took me allmost over 20 years to finally start a blog. But here we are. This is my first personal blog post ever. It's about how and why I finally made this place.
 
 ## Tech stack 
 
 Nulla facilisi. Aenean urna metus, egestas quis mauris non, dignissim vestibulum risus. Mauris posuere nisl a massa commodo rhoncus. Fusce sed euismod dui, eget aliquet sem. Aenean quam est, iaculis quis aliquet at, semper id tellus. Suspendisse fringilla ipsum diam, suscipit commodo neque varius ac. Maecenas commodo orci vitae massa dapibus, interdum ultricies ex scelerisque. Nullam volutpat mollis aliquam. Donec fringilla interdum urna, nec posuere est tincidunt a.
+
+### Zola
 
 Morbi molestie aliquam congue. Sed pulvinar id lectus eget luctus. Fusce non augue efficitur, posuere dolor et, gravida enim. In ullamcorper lorem turpis, in finibus eros posuere id. Maecenas vulputate dapibus risus vel tempor. In pulvinar commodo dui eu mattis. Duis fringilla dictum elit, et dictum nisi sollicitudin non. Vestibulum fermentum ligula id augue ullamcorper, a bibendum neque ultrices.
 
@@ -79,9 +81,7 @@ async function getStoredPoem(url) {
 }
 ```
 
-<div class="test">
-    <p class="test__item">test</p>
-</div>
+Vivamus at volutpat dolor, vitae interdum nulla. Morbi vitae sagittis mi, a pulvinar ex. Fusce convallis diam quis turpis tristique, sodales euismod nunc ullamcorper. Aenean id nulla et leo sodales aliquam. Donec a felis vel ipsum fringilla volutpat. Praesent luctus nisl sit amet est interdum elementum. Etiam tincidunt malesuada sapien, quis tincidunt urna faucibus sed. Aliquam iaculis ex at felis sodales iaculis. Sed quis mauris finibus, consequat risus rutrum, ornare libero. Maecenas ultrices mollis nibh in interdum. Cras molestie quis velit quis dictum. Cras vehicula neque id turpis facilisis fringilla. Quisque sit amet tincidunt lectus, vel feugiat diam. Nullam euismod lacinia mi non facilisis.
 
 <style>
 .terminal {
@@ -143,3 +143,5 @@ async function getStoredPoem(url) {
   }
 }
 </style>
+
+<!-- more -->

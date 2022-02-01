@@ -1,28 +1,37 @@
 {% extends "base.html" %}
 
+{% import "macros/about.html" as about %}
 {% block title %}{{ page.title }} - {{ config.title }}{% endblock %}
 {% block description %}{{ page.description }}{% endblock %}
 
 {% block content %}
-<header class="row pt-clear">
-    <div class="container">
-        <div class="flex flex--align-items-baseline flex--column-gap-base flex--justify-space-between">
-            <!-- <h1 class="logo">
-                {{ page.title }}
-            </h1> -->
-            <p class="logo">
-                <a href="/">{{ config.title }}</a>
+{#<header class="row row--header">
+    <div class="container container--header">
+        <div class="flex align-items-baseline column-gap-base justify-space-between">
+            <p class="logo text-s">
+                <a class="logo__link" href="/">
+                    {{ config.title }}
+                </a>
             </p>
-            <p class="color-meta text-date text-s">
+            <p class="color-meta text-s">
                 {{ page.date | date(format=config.extra.blog_date_format) }}
             </p>
         </div>
     </div>
-</header>
-<main>
+</header>#}
+{#<header class="row pt-clear">
+    <div class="container">
+        <div class="flex align-items-baseline justify-center">
+            <p class="logo">
+                <a href="/">{{ config.title }}</a>
+            </p>
+        </div>
+    </div>
+</header>#}
+<main class="layout">
     <header class="row">
         <div class="container">
-            <div class="intro flex flex--align-items-center flex-justify-content-center">
+            <div class="intro intro-top">
                 <h1>
                     {{ page.title }}
                 </h1>
@@ -30,10 +39,60 @@
         </div>
     </header>
     <div class="row">
-        <div class="container flow">
-            {{ page.content | safe }}
+        <div class="container">
+            <div class="flow article">
+                <p class="article__date">
+                    <!-- <span class="color-meta">{{ page.date | date(format=config.extra.blog_date_format)
+                        }} &mdash;</span> -->
+                </p>
+                {{ page.content | safe }}
+                <p class="color-meta">
+                    Published {{ page.date | date(format=config.extra.blog_date_format) }}
+                </p>
+                <!-- <hr> -->
+            </div>
         </div>
     </div>
+    <!-- <div class="row">
+        <div class="container">
+            <p class="color-meta">
+                Published {{ page.date | date(format=config.extra.blog_date_format) }}
+            </p>
+        </div>
+    </div> -->
+
+    <aside class="row row--lg">
+        <div class="container">
+            {% block about %}
+            {{ about::about() }}
+            {% endblock about%}
+        </div>
+    </aside>
+    <section class="row">
+        <div class="container flow">
+            {% set section = get_section(path="_index.md") %}
+            {% set this_page = page %}
+            <h2>
+                {#{{ section.title }}#}
+                All articles
+            </h2>
+            <ul class="list-reset">
+                {% for page in section.pages %}
+                <li
+                    class="flex-bp2 align-items-baseline direction-row-reverse column-gap-base justify-space-between mt-base mt-clear-bp2">
+                    <span class="block color-meta text-date">{{ page.date |
+                        date(format=config.extra.blog_date_format)
+                        }}</span>
+                    {% if page.title is matching(this_page.title) %}
+                    <a class="link-current" href="{{ page.permalink | safe }}">{{ page.title }}</a>
+                    {% else %}
+                    <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
 </main>
 
 {% endblock content %}

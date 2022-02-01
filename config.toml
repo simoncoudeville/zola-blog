@@ -10,4 +10,10 @@ highlight_code = true
 highlight_theme = "css"
 
 [extra]
-blog_date_format = "%d.%m.%Y"
+# blog_date_format = "%e %b %Y"
+# blog_date_format = "%e %B %Y"
+blog_date_format = "%b %e, %Y"
+# blog_date_format = "%B %o, %Y"
+# blog_date_format = "%F"
+# blog_date_format = "%b %e, %Y"
+# blog_date_format = "%m.%d.%Y"

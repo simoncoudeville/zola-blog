@@ -6,19 +6,22 @@
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}" />
     <title>{% block title %}{{ config.title }}{% endblock title %}</title>
-    <link rel="stylesheet" href="https://use.typekit.net/ihr2zpy.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
     {% block content %} {% endblock %}
-    <nav class="row">
+    {# <nav class="row row--footer">
         <div class="container">
             <div class="flow">
                 <h2 class="h3">
-                    Pages
+                    Navigation
                 </h2>
-                <ul class="list-reset">
+                <p class="color-meta text-s">
+                    &copy; {{ now() | date(format="%Y") }}
+                    {{ config.title }}
+                </p>
+                <ul class="list-reset flex column-gap-base text-s">
                     <li>
                         <a href="/">Index</a>
                     </li>
@@ -31,16 +34,20 @@
                 </ul>
             </div>
         </div>
-    </nav>
-    <footer class="row pb-clear">
+    </nav> #}
+    <footer class="row row--lg pb-clear">
         <div class="container">
-            <div class="flex flex--align-items-baseline flex--column-gap-base flex--justify-space-between">
-                <p aria-hidden="true">
+            <div class="flex align-items-baseline column-gap-base justify-space-between">
+                <!-- <p aria-hidden="true">
                     S&#x0306;
-                </p>
+                </p> -->
                 <p class="color-meta">
-                    &copy; <span class="text-date">{{ now() | date(format="%Y") }}</span> {{ config.title }}
+                    &copy; {{ now() | date(format="%Y") }}
+                    {{ config.title }}
                 </p>
+                <!-- <p class="color-meta text-date">
+                    &copy; 2022
+                </p> -->
             </div>
         </div>
     </footer>

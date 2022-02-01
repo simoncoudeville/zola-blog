@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- <header class="row pt-clear">
+    <div class="container">
+        <div class="flex align-items-baseline column-gap-base justify-space-between">
+            <h1 class="logo">
+                {{ config.title }}
+            </h1>
+            <p class="color-meta">
+                Designer &amp; teacher
+            </p>
+        </div>
+    </div>
+</header> -->
+<main>
+    <div class="row">
+        <div class="container">
+            <div class="intro intro-top">
+                <h1>
+                    Hello, my name is Simon.
+                    {# Welcome to the website of Simon Coudeville. #}
+                </h1>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="container">
+            <p>
+                <!-- Hi, I'm Simon, -->
+                I'm an interactive designer into HTML &amp; CSS,
+                Javascript, typography and minimalism.
+                Currently teaching these topics at <a href="https://mct.be">MCT</a> &amp;
+                <a href="https://devine.be">Devine</a>. Some of my design work is on
+                <a href="https://dribbble.com/coudeville">Dribbble</a>. Some of my code experiments are on
+                <a href="https://codepen.io/simoncoudeville/">Codepen</a>. Send me an
+                <a href="mailto:coudeville.simon@gmail.com">email</a> or follow me on
+                <a href="https://twitter.com/simoncoudeville">Twitter</a>. Read more <a href="/about">about
+                    me</a>.
+            </p>
+        </div>
+        <!-- <h1 class="h3 mb-double">
+                    <span class="fw-normal color-meta">Welcome to the website of</span> <br>
+                    Simon Coudeville
+                </h1> -->
+    </div>
+    </div>
+    <section class="row">
+        <div class="container flow">
+            <h2>
+                {{ section.title }}
+            </h2>
+            <ul class="list-reset">
+                {% for page in section.pages %}
+                <li
+                    class="flex-bp2 align-items-baseline direction-row-reverse column-gap-base justify-space-between mt-base mt-clear-bp2">
+                    <span class="block color-meta text-date">{{ page.date |
+                        date(format=config.extra.blog_date_format)
+                        }}</span>
+                    <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+    <section class="row">
+        <div class="container flow">
+            <h2>
+                Personal projects
+            </h2>
+            <ul class="list-reset flow">
+                <li>
+                    <a href="https://poems.simoncoudeville.be">
+                        Poems from the poetry database
+                    </a>
+                    <span class="block color-meta">Displays random poems fetched from the PoetryDB API</span>
+                </li>
+                <li>
+                    <a href="https://apod.simoncoudeville.be">
+                        Astronomy picture of the day
+                    </a>
+                    <span class="block color-meta">Fetches and shows data from the APOD API</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+    {# <section class="row">
+        <div class="container flow">
+            <h2 class="h3">
+                Elsewhere
+            </h2>
+            <ul class="list-reset">
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Codepen</a></li>
+                <li><a href="#">Dribbble</a></li>
+            </ul>
+        </div>
+    </section> #}
+</main>
+
+{% endblock content %}
