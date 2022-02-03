@@ -5,20 +5,20 @@
 {% block description %}{{ page.description }}{% endblock %}
 
 {% block content %}
-{#<header class="row row--header">
-    <div class="container container--header">
+{# <header class="row row--header pt-clear">
+    <div class="container">
         <div class="flex align-items-baseline column-gap-base justify-space-between">
-            <p class="logo text-s">
+            <p class="logo">
                 <a class="logo__link" href="/">
                     {{ config.title }}
                 </a>
             </p>
-            <p class="color-meta text-s">
+            <p class="color-meta">
                 {{ page.date | date(format=config.extra.blog_date_format) }}
             </p>
         </div>
     </div>
-</header>#}
+</header> #}
 {#<header class="row pt-clear">
     <div class="container">
         <div class="flex align-items-baseline justify-center">
@@ -35,16 +35,22 @@
                 <h1>
                     {{ page.title }}
                 </h1>
+                {# <h1 class="mb-1">
+                    {{ page.title }}
+                </h1>
+                <p class="color-meta text-code text-s">
+                    {{ page.date | date(format=config.extra.blog_date_format) }}
+                </p> #}
             </div>
         </div>
     </header>
     <div class="row">
         <div class="container">
             <div class="flow article">
-                <p class="article__date">
-                    <!-- <span class="color-meta">{{ page.date | date(format=config.extra.blog_date_format)
-                        }} &mdash;</span> -->
-                </p>
+                {# <p class="article__date">
+                    <span class="color-meta">{{ page.date | date(format=config.extra.blog_date_format)
+                        }} &mdash;
+                </p> #}
                 {{ page.content | safe }}
                 <p class="color-meta">
                     Published {{ page.date | date(format=config.extra.blog_date_format) }}

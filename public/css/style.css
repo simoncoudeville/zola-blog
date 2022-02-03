@@ -57,24 +57,44 @@ p, h1, h2, h3, h4, h5, h6 {
 
 @font-face {
     font-family: 'Graphik web';
-    src: url('../fonts/Graphik-Medium-Web.woff2') format('woff2'),
-    url('../fonts/Graphik-Medium-Web.woff') format('woff');
-    font-weight: bold;
+    src: url('../fonts/Graphik-Semibold-Web.woff2') format('woff2'),
+    url('../fonts/Graphik-Semibold-Web.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'Graphik web';
+    src: url('../fonts/Graphik-Bold-Web.woff2') format('woff2'),
+    url('../fonts/Graphik-Bold-Web.woff') format('woff');
+    font-weight: 700;
     font-style: normal;
     font-stretch: normal;
 }
 
 @font-face {
     font-family: 'Tiempos Headline web';
-    src: url('../fonts/TiemposHeadlineWeb-Bold.woff') format('woff');
-    font-weight: bold;
+    src: url('../fonts/TiemposHeadlineWeb-Semibold.woff2') format('woff2'),
+    url('../fonts/TiemposHeadlineWeb-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'Tiempos Headline web';
+    src: url('../fonts/TiemposHeadlineWeb-Bold.woff2') format('woff2'),
+    url('../fonts/TiemposHeadlineWeb-Bold.woff') format('woff');
+    font-weight: 700;
     font-style: normal;
     font-stretch: normal;
 }
 
 @font-face {
     font-family: 'Tiempos web';
-    src: url('../fonts/TiemposTextWeb-Regular.woff') format('woff');
+    src: url('../fonts/TiemposTextWeb-Regular.woff2') format('woff2'),
+    url('../fonts/TiemposTextWeb-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
@@ -82,7 +102,8 @@ p, h1, h2, h3, h4, h5, h6 {
 
 @font-face {
     font-family: 'Tiempos web';
-    src: url('../fonts/TiemposTextWeb-RegularItalic.woff') format('woff');
+    src: url('../fonts/TiemposTextWeb-RegularItalic.woff2') format('woff2'),
+    url('../fonts/TiemposTextWeb-RegularItalic.woff') format('woff');
     font-weight: normal;
     font-style: italic;
     font-stretch: normal;
@@ -90,9 +111,10 @@ p, h1, h2, h3, h4, h5, h6 {
 
 @font-face {
     font-family: 'Tiempos web';
-    src: url('../fonts/TiemposTextWeb-SemiboldItalic.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;
+    src: url('../fonts/TiemposTextWeb-Semibold.woff2') format('woff2'),
+    url('../fonts/TiemposTextWeb-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
     font-stretch: normal;
 }
 
@@ -120,6 +142,33 @@ p, h1, h2, h3, h4, h5, h6 {
     url('../fonts/iAWriterMonoS-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'IA Writer Mono web';
+    src: url('../fonts/iAWriterMonoS-Italic.woff2') format('woff2'),
+    url('../fonts/iAWriterMonoS-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'IA Writer Duo web';
+    src: url('../fonts/iAWriterDuoS-Regular.woff2') format('woff2'),
+    url('../fonts/iAWriterDuoS-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'IA Writer Duo web';
+    src: url('../fonts/iAWriterDuoS-Italic.woff2') format('woff2'),
+    url('../fonts/iAWriterDuoS-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
     font-stretch: normal;
 }
 
@@ -172,7 +221,7 @@ p, h1, h2, h3, h4, h5, h6 {
   --global-color-neutral-300: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 87%);
   --global-color-neutral-400: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 65%);
   --global-color-neutral-500: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 45.5%);
-  --global-color-neutral-600: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 30%);
+  --global-color-neutral-600: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 35%);
   --global-color-neutral-700: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 20%);
   --global-color-neutral-800: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 15%);
   --global-color-neutral-900: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 10%);
@@ -195,7 +244,8 @@ p, h1, h2, h3, h4, h5, h6 {
 
   /* border stuff */
 
-  --global-border-radius: var(--global-whitespace-1);
+  --global-border-radius-1: var(--global-whitespace-1);
+  --global-border-radius-2: var(--global-whitespace-2);
 
   /* Typography */
 
@@ -207,11 +257,14 @@ p, h1, h2, h3, h4, h5, h6 {
   /* --global-fontFamily: var(--global-serif-fontFamily); */
   --global-fontFamily: var(--global-sans-fontFamily);
   /* --global-fontFamily: ui-sans-serif, system-ui, -apple-system, "system-ui", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
-  --global-title-fontFamily: "Tiempos Headline web", serif;  
+  --global-heading-fontFamily: "Tiempos Headline web", serif;  
+  --global-code-fontFamily: "IA Writer Duo web", SFMono-Regular, 'Roboto Mono', Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono', 'Roboto Mono',
+  'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro', 'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
   /* --global-code-fontFamily: "Lab Mono web", SFMono-Regular, 'Roboto Mono', Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono', 'Roboto Mono',
   'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro', 'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace; */
-  --global-code-fontFamily: SFMono-Regular, 'Roboto Mono', Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono', 'Roboto Mono',
-  'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro', 'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+  /* --global-code-fontFamily: SFMono-Regular, 'Roboto Mono', Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono', 'Roboto Mono',
+  'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro', 'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace; */
+  --global-heading-fontWeight: 600;
 
   
   --global-scale-ratio: 1.3;
@@ -256,7 +309,7 @@ p, h1, h2, h3, h4, h5, h6 {
 @media (prefers-color-scheme: dark) {
   :root {
     --global-color-primary-lightness: 69%;
-    --global-color-neutral-500: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 51.675%);
+    --global-color-neutral-500: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 51.75%);
     --global-link-decoration-color: var(--global-color-neutral-400);
     --global-backgroundColor: var(--global-color-neutral-900);
     --global-surfaceColor: var(--global-color-neutral-800);
@@ -266,7 +319,7 @@ p, h1, h2, h3, h4, h5, h6 {
   }
 }
 
-@media (min-width: 40rem) {
+@media (min-width: 42em) {
   :root {
     --global-px-fontSize: 19;
     --global-px-baseline: 6;
@@ -313,11 +366,12 @@ h2,
 h3,
 h4 {
   color: var(--global-heading-color);
+  font-weight: var(--global-heading-fontWeight);
 }
 
 h1,
 .h1 {
-  font-family: var(--global-title-fontFamily);
+  font-family: var(--global-heading-fontFamily);
   font-size: var(--global-fontSize-l);
   line-height: calc(var(--global-baseline) * 6);
 }
@@ -325,7 +379,7 @@ h1,
 h2,
 .h2 {
   font-size: var(--global-fontSize-m);
-  font-family: var(--global-title-fontFamily);
+  font-family: var(--global-heading-fontFamily);
   line-height: calc(var(--global-baseline) * 5);
 }
 
@@ -376,8 +430,8 @@ code {
   font-family: var(--global-code-fontFamily);
   font-size: var(--global-fontSize-s);
   font-size: .85rem;
-  line-height: calc(calc(var(--global-baseline-multiplier) - 1) * var(--global-baseline)); 
-  border-radius: var(--global-border-radius); 
+  line-height: calc(var(--global-baseline) * 4.5); 
+  border-radius: var(--global-border-radius-1); 
 }
 
 pre {
@@ -508,7 +562,7 @@ hr {
   justify-content: center;
 }
 
-@media screen and (min-width: 48em) {
+@media screen and (min-width: 42em) {
   .flex-bp2 {
     display: flex;
   }
@@ -549,6 +603,8 @@ hr {
   align-items: center;
   justify-content: center;
   text-align: center;
+  /* background-color: var(--intro-backgroundColor, hsla(var(--global-color-primary-hsl),.25));
+  border-radius: var(--global-border-radius-1); */
 }
 
 .intro-top {
@@ -618,11 +674,11 @@ hr {
   display: inline;
 }
 
-/* @media (prefers-color-scheme: dark) {
-    .c-avatar img {
-        filter: grayscale(100%) sepia(10%) hue-rotate(220deg) contrast(120%);
-    }
-} */
+@media (max-width: 32.75em) {
+  .about .avatar {
+    display: none;
+  }
+}
 
 /*
   Utility: color
@@ -634,7 +690,12 @@ hr {
 
 .link-current {
   --link-color: var(--global-meta-color);
-  text-decoration: none;
+  --link-decoration-color: var(--link-color);
+  /* text-decoration: none; */
+  /* background-color: hsla(var(--global-color-primary-hue), var(--global-neutral-saturation), 50%, .2);
+  padding: 0 .5em;
+  border-radius: var(--global-border-radius-1);
+  margin-left: -.5em; */
 }
 
 .link-current::before {
@@ -643,6 +704,9 @@ hr {
   display: inline-block;
   width: calc(var(--global-whitespace-base) / 2);
   margin-left: calc(var(--global-whitespace-base) / 2 * -1);
+  animation: 1s ease 0s infinite alternate none running blinking;
+  /* transition: 1s ease; */
+  opacity: 0;
   /* color: var(--global-color-primary); */
 
   /* content: "";
@@ -655,8 +719,26 @@ hr {
   background-color: currentColor; */
 }
 
+.link-current:hover::before {
+  animation-play-state: paused;
+  /* animation:;
+  opacity: 1; */
+}
+
 .link-decoration-none {
   text-decoration: none;
+}
+
+@keyframes blinking {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /*
@@ -756,7 +838,7 @@ hr {
   margin-top: var(--global-whitespace-double);
 }
 
-@media screen and (min-width: 48em) {
+@media screen and (min-width: 42em) {
   .mb-clear-bp2 {
     margin-bottom: 0;
   }
@@ -806,8 +888,11 @@ hr {
 
 .z-code {
   --z-punctuation-color: var(--global-color-neutral-400);
+  /* --z-punctuation-color: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 55%); */
   --z-code-color: var(--global-color-neutral-100);
   --z-comment-color: var(--global-meta-color);
+  /* --z-comment-color: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 40%); */
+  /* --z-comment-color: var(--global-color-neutral-600); */
   color: var(--z-punctuation-color);
 }
 
@@ -827,5 +912,6 @@ hr {
 
 .z-comment {
   color: var(--z-comment-color);
+  font-style: italic;
 }
 

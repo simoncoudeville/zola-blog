@@ -20,11 +20,10 @@
     <div class="row">
         <div class="container">
             <div class="flow article">
-                <p class="article__date">
-                    <span class="color-meta">{{ page.date | date(format=config.extra.blog_date_format)
-                        }}</span> &mdash;
-                </p>
                 {{ page.content | safe }}
+                <p class="color-meta">
+                    Published {{ page.date | date(format=config.extra.blog_date_format) }}
+                </p>
             </div>
         </div>
     </div>
@@ -49,7 +48,7 @@
     {% endblock pagination %}
     #}
 
-    <aside class="row">
+    <aside class="row row--lg">
         <div class="container">
             {% block about %}
             {{ about::about() }}
