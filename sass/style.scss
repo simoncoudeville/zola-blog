@@ -1,24 +1,42 @@
+$bp-1: 32.75em;
+$bp-2: 32em;
+
 /*
   Generic: Reset
   ---
   Custom reset
 */
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   box-sizing: border-box;
 }
 
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
@@ -29,173 +47,75 @@ p, h1, h2, h3, h4, h5, h6 {
 */
 
 @font-face {
-    font-family: 'Allrounder Grotesk web';
-    src: url('../fonts/AllrounderGrotesk-Regular.woff2') format('woff2'),
-    url('../fonts/AllrounderGrotesk-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
+  font-family: "Graphik web";
+  src: url("../fonts/Graphik-Regular-Web.woff2") format("woff2"), url("../fonts/Graphik-Regular-Web.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: auto;
 }
 
 @font-face {
-    font-family: 'Allrounder Grotesk web';
-    src: url('../fonts/AllrounderGrotesk-Medium.woff2') format('woff2'),
-    url('../fonts/AllrounderGrotesk-Medium.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
+  font-family: "Graphik web";
+  src: url("../fonts/Graphik-Semibold-Web.woff2") format("woff2"), url("../fonts/Graphik-Semibold-Web.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: auto;
 }
 
 @font-face {
-    font-family: 'Graphik web';
-    src: url('../fonts/Graphik-Regular-Web.woff2') format('woff2'),
-    url('../fonts/Graphik-Regular-Web.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
+  font-family: "Graphik web";
+  src: url("../fonts/Graphik-Bold-Web.woff2") format("woff2"), url("../fonts/Graphik-Bold-Web.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: auto;
 }
 
 @font-face {
-    font-family: 'Graphik web';
-    src: url('../fonts/Graphik-Semibold-Web.woff2') format('woff2'),
-    url('../fonts/Graphik-Semibold-Web.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-    font-stretch: normal;
+  font-family: "Tiempos Headline web";
+  src: url("../fonts/TiemposHeadlineWeb-Semibold.woff2") format("woff2"), url("../fonts/TiemposHeadlineWeb-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: auto;
 }
 
 @font-face {
-    font-family: 'Graphik web';
-    src: url('../fonts/Graphik-Bold-Web.woff2') format('woff2'),
-    url('../fonts/Graphik-Bold-Web.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
-    font-stretch: normal;
+  font-family: "Tiempos Headline web";
+  src: url("../fonts/TiemposHeadlineWeb-Bold.woff2") format("woff2"), url("../fonts/TiemposHeadlineWeb-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: auto;
 }
 
 @font-face {
-    font-family: 'Tiempos Headline web';
-    src: url('../fonts/TiemposHeadlineWeb-Semibold.woff2') format('woff2'),
-    url('../fonts/TiemposHeadlineWeb-Semibold.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-    font-stretch: normal;
+  font-family: "Tiempos web";
+  src: url("../fonts/TiemposTextWeb-Regular.woff2") format("woff2"), url("../fonts/TiemposTextWeb-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: auto;
 }
 
 @font-face {
-    font-family: 'Tiempos Headline web';
-    src: url('../fonts/TiemposHeadlineWeb-Bold.woff2') format('woff2'),
-    url('../fonts/TiemposHeadlineWeb-Bold.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
-    font-stretch: normal;
+  font-family: "Tiempos web";
+  src: url("../fonts/TiemposTextWeb-RegularItalic.woff2") format("woff2"), url("../fonts/TiemposTextWeb-RegularItalic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-stretch: normal;
+  font-display: auto;
 }
 
 @font-face {
-    font-family: 'Tiempos web';
-    src: url('../fonts/TiemposTextWeb-Regular.woff2') format('woff2'),
-    url('../fonts/TiemposTextWeb-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-}
-
-@font-face {
-    font-family: 'Tiempos web';
-    src: url('../fonts/TiemposTextWeb-RegularItalic.woff2') format('woff2'),
-    url('../fonts/TiemposTextWeb-RegularItalic.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-    font-stretch: normal;
-}
-
-@font-face {
-    font-family: 'Tiempos web';
-    src: url('../fonts/TiemposTextWeb-Semibold.woff2') format('woff2'),
-    url('../fonts/TiemposTextWeb-Semibold.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-    font-stretch: normal;
-}
-
-@font-face {
-    font-family: 'Azeret Mono web';
-    src: url('../fonts/AzeretMono-Regular-1.woff2') format('woff2'),
-    url('../fonts/AzeretMono-Regular-1.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-}
-
-@font-face {
-    font-family: 'Suisse Intl Mono web';
-    src: url('../fonts/SuisseIntlMono-Regular-WebXL.woff2') format('woff2'),
-    url('../fonts/SuisseIntlMono-Regular-WebXL.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-}
-
-@font-face {
-    font-family: 'IA Writer Mono web';
-    src: url('../fonts/iAWriterMonoS-Regular.woff2') format('woff2'),
-    url('../fonts/iAWriterMonoS-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-}
-
-@font-face {
-    font-family: 'IA Writer Mono web';
-    src: url('../fonts/iAWriterMonoS-Italic.woff2') format('woff2'),
-    url('../fonts/iAWriterMonoS-Italic.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-    font-stretch: normal;
-}
-
-@font-face {
-    font-family: 'IA Writer Duo web';
-    src: url('../fonts/iAWriterDuoS-Regular.woff2') format('woff2'),
-    url('../fonts/iAWriterDuoS-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-}
-
-@font-face {
-    font-family: 'IA Writer Duo web';
-    src: url('../fonts/iAWriterDuoS-Italic.woff2') format('woff2'),
-    url('../fonts/iAWriterDuoS-Italic.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-    font-stretch: normal;
-}
-
-@font-face {
-    font-family: 'Lab Mono web';
-    src: url('../fonts/labmono-regular-web.woff2') format('woff2'),
-    url('../fonts/labmono-regular-web.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-}
-
-@font-face {
-    font-family: 'Atlas Typewriter web';
-    src: url('../fonts/AtlasTypewriter-Regular-Web.woff2') format('woff2'),
-    url('../fonts/AtlasTypewriter-Regular-Web.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-}
-
-@font-face {
-    font-family: 'Silka Mono web';
-    src: url('../fonts/silkamono-regular-webfont.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
+  font-family: "Tiempos web";
+  src: url("../fonts/TiemposTextWeb-Semibold.woff2") format("woff2"), url("../fonts/TiemposTextWeb-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: auto;
 }
 
 /*
@@ -211,7 +131,7 @@ p, h1, h2, h3, h4, h5, h6 {
   --global-color-primary-saturation: 80%;
   --global-color-primary-lightness: 60%;
   --global-color-primary-hsl: var(--global-color-primary-hue), var(--global-color-primary-saturation), var(--global-color-primary-lightness);
-  --global-color-primary: hsl(var(--global-color-primary-hsl));    
+  --global-color-primary: hsl(var(--global-color-primary-hsl));
 
   --global-neutral-hue: var(--global-color-primary-hue);
   --global-neutral-saturation: 3%;
@@ -234,12 +154,11 @@ p, h1, h2, h3, h4, h5, h6 {
   --global-border-color-hard: var(--global-color-neutral-400);
   --global-text-color: var(--global-heading-color);
   --global-link-color: var(--global-text-color);
-  /* --global-link-color: var(--global-color-primary); */
   --global-link-decoration-color: var(--global-meta-color);
   --global-link-hover-color: var(--global-meta-color);
   --global-selection-backgroundColor: var(--global-text-color);
   --global-selection-color: var(--global-backgroundColor);
-  --global-scrollbar-thumb-color: var(--global-meta-color);
+  --global-scrollbar-thumb-color: var(--global-border-color);
   --global-scrollbar-track-color: var(--global-backgroundColor);
 
   /* border stuff */
@@ -249,28 +168,23 @@ p, h1, h2, h3, h4, h5, h6 {
 
   /* Typography */
 
-  /* --global-sans-fontFamily: "Allrounder Grotesk web", sans-serif; */
   --global-sans-fontFamily: "Graphik web", sans-serif;
-  /* --global-sans-fontFamily: "Inter", sans-serif; */
-  /* --global-sans-fontFamily: "DM Sans", sans-serif; */
+  // --global-sans-fontFamily: "Messina Sans Trial", sans-serif;
   --global-serif-fontFamily: "Tiempos web", serif;
-  /* --global-fontFamily: var(--global-serif-fontFamily); */
+  // --global-serif-fontFamily: "Messina Serif Trial", serif;
   --global-fontFamily: var(--global-sans-fontFamily);
-  /* --global-fontFamily: ui-sans-serif, system-ui, -apple-system, "system-ui", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
-  --global-heading-fontFamily: "Tiempos Headline web", serif;  
-  --global-code-fontFamily: "IA Writer Duo web", SFMono-Regular, 'Roboto Mono', Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono', 'Roboto Mono',
-  'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro', 'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
-  /* --global-code-fontFamily: "Lab Mono web", SFMono-Regular, 'Roboto Mono', Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono', 'Roboto Mono',
+  --global-heading-fontFamily: "Tiempos Headline web", serif;
+  // --global-heading-fontFamily: "Messina Serif Trial", serif;
+  /* --global-code-fontFamily: "IA Writer Duo web", SFMono-Regular, 'Roboto Mono', Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono', 'Roboto Mono',
   'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro', 'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace; */
-  /* --global-code-fontFamily: SFMono-Regular, 'Roboto Mono', Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono', 'Roboto Mono',
-  'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro', 'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace; */
+  --global-code-fontFamily: SFMono-Regular, "Roboto Mono", Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
   --global-heading-fontWeight: 600;
 
-  
-  --global-scale-ratio: 1.3;
-  --global-px-fontSize: 16;
+  --global-scale-ratio: 1.3333;
+  --global-px-fontSize: 17;
   --global-root-fontSize: calc(var(--global-px-fontSize) / 16 * 100%);
-  --global-fontSize-xs: 0.78947368rem;
+  --global-fontSize-xs: 0.75rem;
   --global-fontSize-s: 0.875rem;
   --global-fontSize: 1rem;
 
@@ -303,7 +217,6 @@ p, h1, h2, h3, h4, h5, h6 {
 
   /* Layout */
   --global-content-maxWidth: 37rem;
-
 }
 
 @media (prefers-color-scheme: dark) {
@@ -319,12 +232,20 @@ p, h1, h2, h3, h4, h5, h6 {
   }
 }
 
-@media (min-width: 42em) {
+@media (min-width: 51.5em) {
   :root {
-    --global-px-fontSize: 19;
+    --global-px-fontSize: 20;
+    // --global-px-fontSize: 19;
     --global-px-baseline: 6;
   }
 }
+
+// @media (min-width: 65em) {
+//   :root {
+//     --global-px-fontSize: 22;
+//     --global-px-baseline: 7;
+//   }
+// }
 
 /* 
   Elements: Page
@@ -333,20 +254,25 @@ p, h1, h2, h3, h4, h5, h6 {
 */
 
 html {
+  --page-scrollbar-thumb-color: var(--global-scrollbar-thumb-color);
+  --page-scrollbar-track-color: var(--global-scrollbar-track-color);
   --page-inner-whitespace: clamp(var(--global-whitespace-5), -1rem + 10vw, var(--global-whitespace-10));
   padding: var(--global-whitespace-base) 0;
   font-family: var(--global-fontFamily);
   font-size: var(--global-root-fontSize);
-  font-feature-settings: 'liga', 'dlig', 'lnum';
-  font-feature-settings: 'ss05';
+  font-feature-settings: "liga", "dlig", "lnum";
+  font-feature-settings: "ss05";
   line-height: calc(var(--global-baseline) * 5);
-
+  background-color: var(--page-backroundColor, var(--global-backgroundColor));
+  color: var(--global-text-color);
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--html-backroundColor, var(--global-backgroundColor));
-  color: var(--global-text-color);  
-  scroll-behavior: smooth;
-  text-rendering: optimizeLegibility;     
+}
+
+body {
+  overflow-x: hidden;
 }
 
 ::selection {
@@ -373,13 +299,13 @@ h1,
 .h1 {
   font-family: var(--global-heading-fontFamily);
   font-size: var(--global-fontSize-l);
-  line-height: calc(var(--global-baseline) * 6);
+  line-height: calc(var(--global-baseline) * 7);
 }
 
 h2,
 .h2 {
-  font-size: var(--global-fontSize-m);
   font-family: var(--global-heading-fontFamily);
+  font-size: var(--global-fontSize-m);
   line-height: calc(var(--global-baseline) * 5);
 }
 
@@ -400,8 +326,7 @@ h4,
 a {
   color: var(--link-color, var(--global-link-color));
   will-change: color;
-  transition: color .1s ease-out;
-  display: inline-block;
+  transition: color 0.1s ease-out;
   text-decoration-color: var(--link-decoration-color, var(--global-link-decoration-color));
   text-decoration-thickness: 0.0675em;
 }
@@ -429,15 +354,15 @@ pre,
 code {
   font-family: var(--global-code-fontFamily);
   font-size: var(--global-fontSize-s);
-  font-size: .85rem;
-  line-height: calc(var(--global-baseline) * 4.5); 
-  border-radius: var(--global-border-radius-1); 
+  font-size: 0.85rem;
+  line-height: calc(var(--global-baseline) * 4.5);
+  border-radius: var(--global-border-radius-1);
 }
 
 pre {
   padding: var(--global-whitespace-base);
   background-color: var(--global-color-neutral-800);
-  overflow: auto;  
+  overflow: auto;
 }
 
 pre[data-linenos] {
@@ -506,12 +431,12 @@ hr {
 
 .container {
   max-width: var(--global-content-maxWidth);
-  margin: auto;  
+  margin: auto;
 }
 
 .container--header {
   border-bottom: 1px solid var(--global-border-color);
-  padding-bottom: calc(var(--global-whitespace-base) / 2);
+  padding-bottom: calc(var(--global-whitespace-base));
 }
 
 /*
@@ -562,7 +487,7 @@ hr {
   justify-content: center;
 }
 
-@media screen and (min-width: 42em) {
+@media screen and (min-width: $bp-1) {
   .flex-bp2 {
     display: flex;
   }
@@ -577,6 +502,27 @@ hr {
 }
 
 /*
+  Components: SVG canvas
+  ---
+  SVG canvas to draw stuff in per post
+*/
+
+.svg-canvas {
+  display: block;
+  position: absolute;
+  top: 0;
+  // height: 50vh;
+  top: calc(var(--global-whitespace-base) * 3);
+  height: calc(50vh - var(--global-whitespace-base) * 4);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  overflow: visible;
+  stroke: var(--global-border-color);
+  // stroke-width: 5;
+}
+
+/*
   Components: Logo
   ---
   Brand image/logo
@@ -585,7 +531,9 @@ hr {
 .logo {
   color: var(--logo-color, var(--global-heading-color));
   font-size: 1rem;
-  line-height: var(--global-whitespace-5);  
+  line-height: var(--global-whitespace-5);
+  // font-weight: var(--global-heading-fontWeight);
+  // font-family: var(--global-heading-fontFamily);
 }
 
 .logo__link {
@@ -608,7 +556,18 @@ hr {
 }
 
 .intro-top {
-  min-height: calc(50vh - var(--global-whitespace-base) * 4);
+  // min-height: calc(50vh - var(--global-whitespace-base) * 4);
+  min-height: calc(50vh - var(--global-whitespace-base) * 6);
+}
+
+.intro-meta {
+  border: 1px solid var(--global-border-color);
+  // border-width: 1px 0 0 0;
+  // padding: var(--global-whitespace-base) 0;
+  // margin-bottom: var(--global-whitespace-double);
+  border-width: 0 0 1px;
+  padding: 0 0 var(--global-whitespace-base) 0;
+  margin-bottom: var(--global-whitespace-base);
 }
 
 /*
@@ -624,9 +583,9 @@ hr {
   position: relative;
   width: var(--c-avatar-dimension);
   border-radius: 0 0 var(--c-avatar-dimension) var(--c-avatar-dimension);
-  overflow: hidden;    
+  overflow: hidden;
 }
- 
+
 .avatar:before {
   content: "";
   display: block;
@@ -634,20 +593,21 @@ hr {
   bottom: 0;
   left: 0;
   right: 0;
-  height: var(--c-avatar-dimension);
-  width: var(--c-avatar-dimension);
+  /* height: var(--c-avatar-dimension); */
+  width: 100%;
+  aspect-ratio: 1 / 1;
   border-radius: 100%;
   box-shadow: inset 0 0 0 var(--c-avatar-border) var(--c-avatar-border-color);
 }
 
 .avatar img {
   position: relative;
-  width: calc(var(--c-avatar-dimension) - calc(var(--c-avatar-border) * 2));
+  width: calc(var(--c-avatar-dimension));
   margin-bottom: var(--c-avatar-border);
   margin-left: var(--c-avatar-border);
   margin-right: var(--c-avatar-border);
   border-radius: 0 0 var(--c-avatar-dimension) var(--c-avatar-dimension);
-  filter: grayscale(100%) sepia(5%) hue-rotate(var(--global-color-primary-hue)) contrast(120%);    
+  filter: grayscale(100%) sepia(5%) hue-rotate(var(--global-color-primary-hue)) contrast(120%);
 }
 
 /*
@@ -657,10 +617,10 @@ hr {
 */
 
 .about {
-    display: grid;
-    grid-gap: var(--global-whitespace-base);
-    grid-template-columns: auto 1fr;
-    align-items: center;
+  display: grid;
+  grid-gap: var(--global-whitespace-base);
+  grid-template-columns: auto auto;
+  align-items: center;
 }
 
 .about__title {
@@ -674,10 +634,15 @@ hr {
   display: inline;
 }
 
-@media (max-width: 32.75em) {
+@media (max-width: $bp-1) {
   .about .avatar {
     display: none;
   }
+}
+
+.emo {
+  font-family: "Noto Emoji", sans-serif;
+  font-weight: 700;
 }
 
 /*
@@ -685,7 +650,7 @@ hr {
 */
 
 .color-meta {
-  color: var(--global-meta-color);  
+  color: var(--global-meta-color);
 }
 
 .link-current {
@@ -758,7 +723,7 @@ hr {
 }
 
 .text-date {
-  font-feature-settings: 'zero', 'tnum';
+  font-feature-settings: "zero", "tnum";
 }
 
 .text-s {
@@ -767,11 +732,15 @@ hr {
 
 .text-xs {
   font-size: var(--global-fontSize-xs);
-  line-height: calc(4 * var(--global-baseline));
+  line-height: calc(var(--global-baseline) * 4);
 }
 
 .text-center {
   text-align: center;
+}
+
+.text-right {
+  text-align: right;
 }
 
 /* 
@@ -838,7 +807,11 @@ hr {
   margin-top: var(--global-whitespace-double);
 }
 
-@media screen and (min-width: 42em) {
+.test {
+  color: red;
+}
+
+@media screen and (min-width: $bp-1) {
   .mb-clear-bp2 {
     margin-bottom: 0;
   }
@@ -861,9 +834,9 @@ hr {
 }
 
 /* 
-  Scoping: Content
+  Scoping: flow
   ---
-  Specific styles for elements inside .content
+  Specific styles for elements inside .flow
 */
 
 .flow > * + * {
@@ -872,7 +845,7 @@ hr {
 
 .flow > * + h2,
 .flow > * + hr {
-  margin-top: calc(var(--global-whitespace-base) * 2)
+  margin-top: calc(var(--global-whitespace-base) * 2);
 }
 /* 
 .flow > h3 + * {
@@ -914,4 +887,3 @@ hr {
   color: var(--z-comment-color);
   font-style: italic;
 }
-

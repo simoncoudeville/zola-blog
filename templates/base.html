@@ -6,10 +6,16 @@
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}" />
     <title>{% block title %}{{ config.title }}{% endblock title %}</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
+    <svg class="svg-canvas" width="1000" height="500" viewBox="0 0 1000 500" preserveAspectRatio="xMidYMid slice"
+        vector-effect="non-scaling-stroke" stroke-width="1"></svg>
     {% block content %} {% endblock %}
     {# <nav class="row row--footer">
         <div class="container">
@@ -35,21 +41,25 @@
             </div>
         </div>
     </nav> #}
-    <footer class="row row--lg pb-clear">
+    <footer class="row pb-clear">
         <div class="container">
             <div class="flex align-items-baseline column-gap-base justify-space-between">
+                <p class="color-meta text-s">
+                    &copy; {{ now() | date(format="%Y") }}
+                    {{ config.title }}
+                </p>
                 <!-- <p aria-hidden="true">
                     S&#x0306;
                 </p> -->
-                <p class="color-meta">
-                    &copy;{{ now() | date(format="%Y") }} by
-                    {{ config.title }}
-                </p>
+                <!-- <p aria-hidden="true">
+                    <span class="emo">✌🏼</span>
+                </p> -->
                 <!-- <p class="color-meta text-date">
                     &copy; 2022
                 </p> -->
             </div>
         </div>
     </footer>
+</body>
 
 </html>

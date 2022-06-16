@@ -3,13 +3,28 @@
 {% import "macros/about.html" as about %}
 
 {% block content %}
+
+
+{% set pages = section.pages %}
+{% for page in pages | slice(end=1) %}
+<header class="row row--header pt-clear">
+    <div class="container">
+        <div class="flex align-items-baseline column-gap-base justify-space-between">
+            <p class="logo">
+                <a class="logo__link" href="/">
+                    {{ config.title }}
+                </a>
+            </p>
+            <p class="color-meta">
+                {{ page.date | date(format=config.extra.blog_date_format) }}
+            </p>
+        </div>
+    </div>
+</header>
 <main>
-    {% set pages = section.pages %}
-    {% for page in pages | slice(end=1) %}
     <header class="row">
         <div class="container">
             <div class="intro intro-top">
-                <!-- <img src="https://johannesklingebiel.de/img/2021-07-27-teaser.png" alt="" class="intro__img"> -->
                 <!-- <p class="color-meta text-s">
                                 {{ page.date | date(format=config.extra.blog_date_format) }}
                             </p> -->
@@ -21,9 +36,9 @@
         <div class="container">
             <div class="flow article">
                 {{ page.content | safe }}
-                <p class="color-meta">
+                <!-- <p class="color-meta">
                     Published {{ page.date | date(format=config.extra.blog_date_format) }}
-                </p>
+                </p> -->
             </div>
         </div>
     </div>
@@ -48,7 +63,7 @@
     {% endblock pagination %}
     #}
 
-    <aside class="row row--lg">
+    <aside class="row">
         <div class="container">
             {% block about %}
             {{ about::about() }}
